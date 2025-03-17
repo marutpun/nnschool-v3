@@ -1,0 +1,26 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import GameList from '@/components/GameList.astro';
+
+import priestAndDevil from '../assets/game/priest-devil.png';
+import data from '@/data/project.yaml';
+
+import type { Project } from '@/types/data';
+
+const {
+  page: { game },
+}: Project = data;
+
+console.log(priestAndDevil);
+---
+
+<Layout title={game.title} header={game.title} description={game.description} isBackgroundImg={false}>
+  <GameList
+    title="เกมนักบวชและปีศาจ"
+    link="https://flashghetto.com/games/priests_n_devils"
+    description="พานักบวชและปีศาจข้ามฝาก โดยไม่ถูกปีศาจจับกินเสียก่อน"
+    src={priestAndDevil}
+    width={650}
+    height={350}
+  />
+</Layout>

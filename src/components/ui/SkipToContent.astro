@@ -1,0 +1,12 @@
+---
+interface Props {
+  anchorId: string;
+  label: string;
+}
+
+const { anchorId, label } = Astro.props;
+---
+
+<div role="region" aria-label={label}>
+  <a class="SkipToContent" href={`#${anchorId}`}>{label}</a>
+</div>

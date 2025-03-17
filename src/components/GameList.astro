@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  description: string;
+  link: string;
+  src: string;
+  width: number;
+  height: number;
+}
+
+const { title, description, link, src, width, height } = Astro.props;
+---
+
+<div class="card max-w-96 shadow">
+  <figure>
+    <Image src={src} width={width} height={height} alt={title} />
+  </figure>
+  <div class="card-body">
+    <h2 class="card-title">{title}</h2>
+    <p>{description}</p>
+    <div class="card-actions justify-end">
+      <a class="link link-hover" href={link} target="_blank">เล่นเกม</a>
+    </div>
+  </div>
+</div>

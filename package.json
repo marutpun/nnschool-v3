@@ -1,0 +1,31 @@
+{
+  "name": "nanong-school-v3",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.1.1",
+    "@astrojs/netlify": "^6.2.3",
+    "@astrojs/react": "^4.2.1",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "astro": "^5.4.3",
+    "nprogress": "^0.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-yaml": "^4.1.2",
+    "@tailwindcss/vite": "^4.0.13",
+    "@types/nprogress": "^0.2.3",
+    "daisyui": "^5.0.2",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.0.13"
+  }
+}

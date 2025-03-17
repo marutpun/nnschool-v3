@@ -1,0 +1,17 @@
+---
+import { Image } from 'astro:assets';
+
+import heroImg from '../../assets/hompage_hero.jpg';
+
+import type { HeroProps } from '@/types/props';
+
+const { isBackgroundImg, header, description } = Astro.props as HeroProps;
+---
+
+<header class:list={['Hero', { 'min-h-96': isBackgroundImg, 'min-h-48': !isBackgroundImg }, { 'bg-primary': !isBackgroundImg }]}>
+  {isBackgroundImg && <Image src={heroImg} width={1280} height={720} alt="Hero" class="Hero_img" />}
+  <div class:list={['Hero_meta', { 'text-base-100': isBackgroundImg, 'text-base-content': !isBackgroundImg }]}>
+    <h1 class="Hero_title">{header}</h1>
+    <p class="Hero_description">{description}</p>
+  </div>
+</header>

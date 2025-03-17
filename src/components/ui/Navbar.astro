@@ -1,0 +1,41 @@
+---
+import type { NavLink } from '@/types/ui';
+
+interface Props {
+  brand: string;
+  links: NavLink[];
+}
+
+const { brand, links } = Astro.props;
+
+const currentPathname = Astro.url.pathname;
+---
+
+<nav class="navbar" aria-label="Main">
+  <div class="navbar-start w-full lg:w-1/2">
+    {
+      brand && (
+        <div class="Navbar_brand">
+          <a href="/" class="Navbar_title">
+            {brand}
+          </a>
+        </div>
+      )
+    }
+  </div>
+  <div class="navbar-end hidden lg:inline-flex">
+    {
+      links && (
+        <ul class="menu menu-horizontal">
+          {links.map((link: NavLink) => (
+            <li>
+              <a href={link.to} class="Navbar_link" aria-current={currentPathname === link.to ? 'page' : undefined}>
+                {link.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</nav>

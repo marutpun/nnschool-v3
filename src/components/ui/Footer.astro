@@ -1,0 +1,17 @@
+---
+interface Props {
+  brand: string;
+  department: string;
+  address: string;
+}
+
+const { brand, department, address } = Astro.props;
+---
+
+<footer class="footer Footer">
+  <div class="Footer_container">
+    {brand && <h3 class="text-xl">{brand}</h3>}
+    {department && <p class="text-sm lg:text-base">{department}</p>}
+    {address && <p class="text-sm lg:text-base">{address}</p>}
+  </div>
+</footer>

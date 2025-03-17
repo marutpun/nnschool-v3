@@ -1,0 +1,34 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Avatar from '@/components/ui/Avatar.astro';
+
+import data from '@/data/project.yaml';
+import { themePalette } from '@/config/ui';
+
+import type { Project } from '@/types/data';
+import type { StaffWithTheme } from '@/types/ui';
+
+const {
+  page: { staff },
+  staffList,
+}: Project = data;
+
+const staffWithTheme = staffList.map(
+  (staff, index: number): StaffWithTheme => ({
+    ...staff,
+    theme: themePalette[index % themePalette.length],
+  })
+);
+---
+
+<Layout title={staff.title} header={staff.title} description={staff.description} isBackgroundImg={false}>
+  <ul class="list">
+    {
+      staffWithTheme.map((staff: StaffWithTheme) => (
+        <li class="list-row">
+          <Avatar title={staff.title} name={staff.fullName} role={staff.role} bg={staff.theme} />
+        </li>
+      ))
+    }
+  </ul>
+</Layout>

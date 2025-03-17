@@ -1,0 +1,41 @@
+---
+import featureF1 from '../assets/undraw_certification_aif8.svg?raw';
+import featureF2 from '../assets/undraw_connection_b38q.svg?raw';
+import featureF3 from '../assets/undraw_education_f8ru.svg?raw';
+
+import type { FeatureItem } from '@/types/ui';
+
+const featureList: FeatureItem[] = [
+  {
+    svg: featureF1,
+    title: 'บุคลากรที่มีคุณภาพ',
+    caption: 'บุคลากรที่มีคุณภาพ มีความรู้ ความสามารถ และมีความสุขในการทำงาน',
+  },
+  {
+    svg: featureF2,
+    title: 'การเรียนการสอนร่วมเทคโนโลยี',
+    caption: 'ใช้เครื่องมือที่ทันสมัยให้ผู้เรียนเท่าเทียมและก้าวทันโลก',
+  },
+  {
+    svg: featureF3,
+    title: 'โรงเรียนคุณภาพประจำตำบล',
+    caption: 'พัฒนาคุณภาพด้านการศึกษาให้กับประเทศที่เริ่มจากท้องถิ่น',
+  },
+];
+---
+
+<div class="Feature">
+  {
+    featureList.map((feature: FeatureItem) => {
+      return (
+        <figure class="Feature_Wrapper">
+          <Fragment set:html={feature.svg} class="Feature_Img" />
+          <figcaption class="Feature_Caption">
+            <h3 class="Feature_Title">{feature.title}</h3>
+            <p>{feature.caption}</p>
+          </figcaption>
+        </figure>
+      );
+    })
+  }
+</div>

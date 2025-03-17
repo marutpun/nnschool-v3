@@ -1,0 +1,23 @@
+---
+import { getInitials } from '@/utils';
+
+interface Props {
+  imgSrc?: string;
+  bg: string;
+  title: string;
+  name: string;
+  role: string;
+}
+
+const { imgSrc, bg, title, name, role } = Astro.props;
+---
+
+<div class:list={['avatar', { 'avatar-placeholder': !imgSrc }]}>
+  <div class:list={['w-24', 'rounded-full', { 'text-base-100': !imgSrc }]} style={`background-color: ${bg}`}>
+    <span class="text-3xl font-sarabun">{getInitials(name)}</span>
+  </div>
+</div>
+<div class="Avatar_meta">
+  <p class="text-lg font-bold">{title}{name}</p>
+  <p class="text-base">{role}</p>
+</div>

@@ -1,0 +1,16 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import HomepageFeatures from '@/components/HomepageFeatures.astro';
+
+import data from '@/data/project.yaml';
+
+import type { Project } from '@/types/data';
+
+const {
+  page: { homepage },
+}: Project = data;
+---
+
+<Layout title={homepage.title} header={homepage.title} description={homepage.description} isBackgroundImg={true}>
+  <HomepageFeatures />
+</Layout>

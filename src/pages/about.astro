@@ -1,0 +1,18 @@
+---
+import Layout from '@/layouts/Layout.astro';
+
+import * as markdownModule from '@/contents/about.md';
+import data from '@/data/project.yaml';
+
+import type { Project } from '@/types/data';
+
+const {
+  page: { about },
+}: Project = data;
+
+const markdownContent = markdownModule.compiledContent();
+---
+
+<Layout title={about.title} header={about.title} description={about.description} isBackgroundImg={false}>
+  <div set:html={markdownContent} class="Markdown" />
+</Layout>

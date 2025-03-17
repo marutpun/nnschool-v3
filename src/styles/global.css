@@ -1,0 +1,157 @@
+@import 'tailwindcss';
+@plugin "daisyui" {
+  themes: light --default;
+}
+@plugin "daisyui/theme" {
+  name: 'nns';
+  default: true;
+  prefersdark: false;
+  color-scheme: 'light';
+  --color-primary: oklch(74.73% 0.1821 127.33);
+  --color-primary-content: oklch(0% 0 0);
+  --color-secondary: oklch(44.43% 0.2189 289.23);
+  --color-secondary-content: oklch(100% 0 0);
+}
+
+@theme {
+  --font-sarabun: Sarabun, Helvetica, Arial, 'sans-serif';
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+@layer base {
+  html,
+  body {
+    @apply h-full;
+  }
+
+  a {
+    @apply text-primary hover:underline;
+  }
+}
+
+@layer components {
+  #nprogress {
+    @apply pointer-events-none;
+  }
+
+  #nprogress .bar {
+    @apply fixed top-0 left-0 z-1031 h-0.5 w-full bg-(--color-primary);
+  }
+
+  .SkipToContent {
+    @apply text-base-content bg-base-100 absolute -top-10 left-0 z-100 px-4 py-2 transition-all duration-200 ease-linear focus:top-0 focus:shadow-[0_5px_40px] focus:shadow-(color:--color-base-content)/20;
+  }
+
+  .Navbar_brand {
+    @apply p-4;
+  }
+
+  .Navbar_title {
+    @apply text-base-content font-sarabun text-xl font-bold no-underline;
+  }
+
+  .Navbar_link {
+    @apply text-base-content font-sarabun text-base no-underline;
+  }
+
+  .Hero {
+    @apply relative flex items-center;
+  }
+
+  .Hero_img {
+    @apply absolute top-0 left-0 h-full w-full object-cover brightness-60;
+  }
+
+  .Hero_meta {
+    @apply font-sarabun relative container w-full space-y-4 lg:space-y-6;
+  }
+
+  .Hero_title {
+    @apply text-3xl font-bold lg:text-5xl;
+  }
+
+  .Hero_description {
+    @apply text-base lg:text-xl;
+  }
+
+  .Feature {
+    @apply grid grid-cols-1 grid-rows-3 gap-4 lg:grid-cols-3 lg:grid-rows-1;
+  }
+
+  .Feature_Wrapper {
+    @apply font-sarabun space-y-4 text-center;
+  }
+
+  .Feature svg {
+    @apply h-[200px] max-w-full;
+  }
+
+  .Feature_Title {
+    @apply font-bold;
+  }
+
+  .Feature_Caption {
+    @apply mb-4 space-y-4;
+  }
+
+  .Markdown {
+    @apply font-sarabun;
+  }
+
+  .Avatar_meta {
+    @apply font-sarabun flex flex-col flex-wrap justify-center space-y-2;
+  }
+
+  .Footer {
+    @apply bg-base-300 font-sarabun px-0 py-8 lg:px-8;
+  }
+  .Footer_container {
+    @apply container space-y-4;
+  }
+
+  .Social_Wrapper {
+    @apply inline-block;
+  }
+
+  .Social_link {
+    @apply flex flex-col flex-wrap items-center;
+  }
+
+  .Social_Wrapper svg {
+    @apply h-12 w-12;
+  }
+}
+
+@layer utilities {
+  .Wrapper {
+    @apply flex min-h-full flex-col;
+  }
+
+  .Main {
+    @apply my-8 flex flex-1 flex-col;
+  }
+
+  .Markdown h2 {
+    @apply mt-10 mb-5 text-3xl first:mt-0;
+  }
+  .Markdown p {
+    @apply mb-4 text-base;
+  }
+}
+
+#nprogress .peg {
+  width: 100px;
+  height: 100%;
+  box-shadow:
+    0 0 10px var(--color-primary),
+    0 0 5px var(--color-primary);
+  opacity: 1;
+  display: block;
+  position: absolute;
+  right: 0;
+  transform: rotate(3deg) translateY(-4px);
+}

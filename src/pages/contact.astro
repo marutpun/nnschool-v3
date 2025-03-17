@@ -1,0 +1,20 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Social from '@/components/Social.astro';
+
+import * as markdownModule from '@/contents/contact.md';
+import data from '@/data/project.yaml';
+
+import type { Project } from '@/types/data';
+
+const {
+  page: { contact },
+}: Project = data;
+
+const markdownContent = markdownModule.compiledContent();
+---
+
+<Layout title={contact.title} header={contact.title} description={contact.description} isBackgroundImg={false}>
+  <div set:html={markdownContent} class="Markdown" />
+  <Social />
+</Layout>

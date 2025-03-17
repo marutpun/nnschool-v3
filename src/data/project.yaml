@@ -1,0 +1,59 @@
+name: โรงเรียนวัดนาหนอง
+fullName: โรงเรียนวัดนาหนอง (วิธานราษฎร์อนุกูล)
+department: สำนักงานเขตพื้นที่การศึกษาประถมศึกษา ราชบุรี เขต 1
+address: หมู่ 2 ตำบลดอนแร่ อำเภอเมืองราชบุรี จังหวัดราชบุรี 70000
+
+page:
+  homepage:
+    title: โรงเรียนวัดนาหนอง
+    description: โรงเรียนคุณภาพประจำตำบลดอนแร่
+  about:
+    title: เกี่ยวกับเรา
+    description: ข้อมูลทั่วไป ประวัติ และความเป็นมา
+  oit:
+    title: OIT
+    description: แบบตรวจการเปิดเผยข้อมูลสาธารณะ (Open Data Integrity and Transparency Assessment)
+  staff:
+    title: บุคลากร
+    description: คณะผู้บริหาร ครู และเจ้าหน้าที่
+  contact:
+    title: ติดต่อเรา
+    description: ช่องทางการติดต่อกับโรงเรียน
+  game:
+    title: เกม
+    description: เกมฝึกทักษะอายุ 7 - 13 ปี
+
+staffList:
+  - title: นาย
+    fullName: ธิตติยพัทย์ อยู่จิตร์
+    role: ผู้อำนวยการโรงเรียน
+  - title: นางสาว
+    fullName: นฤมล เปี่ยมพร้อม
+    role: ครู
+  - title: นาย
+    fullName: สิริวัตร สมใจ
+    role: ครู
+  - title: นางสาว
+    fullName: สิรีธร ยางเดิม
+    role: ครู
+  - title: นางสาว
+    fullName: โชตินา ขจิตสุวรรณ
+    role: ครู
+  - title: นาง
+    fullName: ชาริกา ศรีประเสริฐ
+    role: ครู
+  - title: นางสาว
+    fullName: ธนภรณ์ บุญผ่องศิริชัย
+    role: ครู
+  - title: นางสาว
+    fullName: เจนจิรา ลำใยขจี
+    role: ครู
+  - title: นางสาว
+    fullName: พรรณภัทร ไผ่ทอง
+    role: เจ้าหน้าที่ธุรการ
+  - title: นาย
+    fullName: สุภาพ ใจมุ่ง
+    role: นักการภารโรง
+
+social:
+  fb: 102432438057537
