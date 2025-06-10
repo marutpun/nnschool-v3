@@ -3,6 +3,8 @@ import Layout from '@/layouts/Layout.astro';
 import GameList from '@/components/GameList.astro';
 
 import priestAndDevil from '../assets/game/priest-devil.png';
+import onlineColoring from '../assets/game/online-coloring.png';
+
 import data from '@/data/project.yaml';
 
 import type { Project } from '@/types/data';
@@ -10,17 +12,18 @@ import type { Project } from '@/types/data';
 const {
   page: { game },
 }: Project = data;
-
-console.log(priestAndDevil);
 ---
 
 <Layout title={game.title} header={game.title} description={game.description} isBackgroundImg={false}>
-  <GameList
-    title="เกมนักบวชและปีศาจ"
-    link="https://flashghetto.com/games/priests_n_devils"
-    description="พานักบวชและปีศาจข้ามฝาก โดยไม่ถูกปีศาจจับกินเสียก่อน"
-    src={priestAndDevil}
-    width={650}
-    height={350}
-  />
+  <div class="grid grid-cols-1 grid-rows-4 lg:grid-cols-4 lg:grid-rows-1 gap-4">
+    <GameList
+      title="เกมนักบวชและปีศาจ"
+      link="https://flashghetto.com/games/priests_n_devils"
+      description="พานักบวชและปีศาจข้ามฝาก โดยไม่ถูกปีศาจจับกินเสียก่อน"
+      src={priestAndDevil}
+      width={650}
+      height={350}
+    />
+    <GameList title="เกมระบายสีออนไลน์" link="https://www.online-coloring.com" description="มาฝึกระบายสีออนไลน์ด้วยกันเถอะ" src={onlineColoring} width={650} height={350} />
+  </div>
 </Layout>
